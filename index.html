@@ -278,12 +278,12 @@
         <div class="message_section">
           <h1 class="white">Message Me</h1>
           <div class="get_message">
-            <form action="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBmzcnjmKBSQbVwMSGPmnDRRPTPqPNqRrfMJzcgcFxNJXtFxXbDWZhzFwNvCFTkhQNQKhxD" target="_blank" method="POST">
-              <input required type="text" class="name" name="name" placeholder=" " />
+            <form id="form" method="post" >
+              <input required type="text" class="name" name="name" placeholder=" " value="" id="name" />
               <label>Name</label>
-              <input required type="email" class="email" name="email" placeholder=" " />
+              <input required type="email" class="email" name="email" placeholder=" " value="" id="email" />
               <label>Email</label>
-              <textarea name="message" class="message" placeholder=" " required></textarea>
+              <textarea name="message" class="message" placeholder=" " required id="message" ></textarea>
               <label>Message</label>
               <input type="submit" class="button" />
             </form>
@@ -302,5 +302,15 @@
 <script src="./js/jquery-3.5.1.js"></script>
 <script src="./js/main.js"></script>
 <!-- <script src="./js/mail.js"></script> -->
+<script>
+document.getElementById("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  var subject = 'Mail received from your \' Cafe Website \'';
+  window.open(`mailto:takrishtak2002@gmail.com?subject=${subject}&body=Sender: ${name} ,%0D%0AEmail: ${email} ,%0D%0AMessage: ${message}.`, '_blank', true);
+});
+<script>
 
 </html>
