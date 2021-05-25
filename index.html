@@ -305,11 +305,11 @@
 <script>
 document.getElementById("form").addEventListener("submit", function(e) {
   e.preventDefault();
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
-  var subject = 'Mail received from your \' Cafe Website \'';
-  window.open(`mailto:takrishtak2002@gmail.com?subject=${subject}&body=Sender: ${name} ,%0D%0AEmail: ${email} ,%0D%0AMessage: ${message}.`);
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+  const subject = 'Cafe Website';
+  window.open(`mailto:takrishtak2002@gmail.com?subject=${subject}&body=Sender: ${name} ,%0D%0AEmail: ${email} ,%0D%0AMessage: ${message}`);
 });
 </script>
 
