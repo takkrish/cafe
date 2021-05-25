@@ -1206,6 +1206,7 @@ h6 {
   position: relative;
   width: 100vw;
   overflow: hidden;
+  min-height:100px;
 }
 
 
@@ -1294,7 +1295,7 @@ h6 {
 .message_section {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   padding: 40px;
   overflow: hidden;
 }
@@ -2449,7 +2450,6 @@ h6 {
     width: 100vw;
     padding: 0 20px !important;
     margin-top: 40px !important;
-    overflow: hidden;
     padding: 0 !important;
   }
 
